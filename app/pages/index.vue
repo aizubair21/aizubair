@@ -127,6 +127,26 @@ const services = ref(
     ]
   }
 )
+
+
+
+const projects = ref({
+    title:'',
+    subtitle:'',
+    collection:[
+        {
+            name:'',
+            description:'',
+            
+            url:{
+                href:'',
+                text:'',
+            },
+        }
+   ]
+
+
+});
 </script>
 
 <template>
@@ -320,10 +340,10 @@ const services = ref(
   <SectionHeading :heading="services.title" :subHeading="services.subtitle"  />
 
   <!-- Services Grid -->
-  <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-8 ">
+  <div class="flex overflow-x-sfroll items-start gap-8 ">
 
-    <div v-for="serv in services.serv" class="group relative inset-2 ">
-      <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div>
+    <div v-for="serv in services.serv" class="group relative inset-2">
+      <!--<div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div> -->
       
       <div class="relative bg-white shadow-xl dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300" style="height:stretch">
         
