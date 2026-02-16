@@ -317,59 +317,58 @@ const services = ref(
 <Container class="relative z-10 px-4 sm:px-6 lg:px-8">
 
   <!-- Section Header -->
-  <div class="text-center mb-16">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-      <span class="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:via-blue-400 dark:to-pink-400">
-        {{ services.title }}
-      </span>
-    </h2>
-    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-      {{ services.subtitle }}
-    </p>
-  </div>
+  <SectionHeading :heading="services.title" :subHeading="services.subtitle"  />
 
   <!-- Services Grid -->
-  <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-8 ">
 
-    <div v-for="serv in services.serv" class="group relative ">
-      <div class="absolute bg-white -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div>
-      <div class="relative dark:bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300">
+    <div v-for="serv in services.serv" class="group relative inset-2 ">
+      <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div>
+      
+      <div class="relative bg-white shadow-xl dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300" style="height:stretch">
+        
         <!-- Icon -->
-        <div class="text-5xl mb-4">{{ serv.icon }}</div>
-        
-        <!-- Title -->
-        <Heading>
-          {{ serv.name }}
-        </Heading>
-        
-        <!-- Description -->
-        <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-          {{ serv.description }}
-        </p>
-        
-        <!-- Tags -->
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span 
-            v-for="tag in serv.tags" 
-            :key="tag"
-            class="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full"
-          >
-            {{ tag }}
-          </span>
+        <div class="relative border-b border-gray-300 border-dashed h-32 flex items-center justify-center">
+          <div class="text-5xl mb-4">{{ serv.icon }}</div>
         </div>
+
+        <div class="p-6 flex flex-col">
         
-        <!-- CTA -->
-        <NavLink :href="serv.url.href" class="inline-flex items-center gap-2 text-purple-500 font-semibold group-hover:gap-3 transition-all">
-          {{ serv.url.text }}
-        </NavLink>
+          <!-- Title -->
+          <Heading>
+            {{ serv.name }}
+          </Heading>
+        
+          <!-- Description -->
+          <p class="flex-1 text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+            {{ serv.description }}
+          </p>
+        
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span
+              v-for="tag in serv.tags"
+              :key="tag"
+              class="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full"
+            >
+              {{ tag }}
+            </span>
+          </div>
+        
+          <!-- CTA -->
+          <NavLink :href="serv.url.href" class="inline-flex items-center gap-2 text-purple-500 font-semibold group-hover:gap-3 transition-all">
+            {{ serv.url.text }}
+          </NavLink>
+        </div>
       </div>
     </div>
 
 
   </div>
 
-  <div class="grid grid-cols-4 mt-4 gap-4">
-      <Cart v-for="serv in services.serv" class="">
+  <!-- <div class="grid grid-cols-4 mt-4 gap-4">
+      <Cart v-for="serv in services.serv" class="relative inset-2 ">
+        <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div>
         <div :color="serv.color" class="flex items-center justify-center h-24 "> {{ serv.label }} </div>
         <template #header>
           {{ serv.name }}
@@ -378,7 +377,7 @@ const services = ref(
           <Content>{{serv.description}}</Content>
         </template>
       </Cart>
-  </div>
+  </div> -->
 
 </Container>
 
