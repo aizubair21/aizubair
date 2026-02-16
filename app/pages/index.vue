@@ -238,75 +238,11 @@ const projects = ref({
     <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wMyIgZmlsbC1ydWxlPSJub2tlbiIvPjwvZz48L3N2Zz4=')] opacity-30 dark:opacity-10"></div>
 
     <Container class="relative z-10 px-4 sm:px-6 lg:px-8">
-
+ 
       <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-          <span class="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:via-blue-400 dark:to-pink-400">
-            {{ stack.title }}
-          </span>
-        </h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          {{ stack.subtitle }}
-        </p>
-      </div>
+      <SectionHeading :heading="stack.title" :subHeading="stack.subtitle"  />
 
-      <!-- TALL Stack Infographic - Left to Right -->
-      <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-2">
-        
-        <!-- TailwindCSS (T) -->
-        <div class="group relative">
-          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
-          <div class="relative bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div class="text-4xl sm:text-5xl mb-3">{{ stack.tall[0].icon }}</div>
-            <h3 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">{{ stack.tall[0].name }}</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">{{ stack.tall[0].description }}</p>
-          </div>
-        </div>
-
-        <!-- Plus Sign -->
-        <div class="hidden lg:flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-xl shadow-lg">+</div>
-
-        <!-- Alpine.js (A) -->
-        <div class="group relative">
-          <div class="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
-          <div class="relative bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div class="text-4xl sm:text-5xl mb-3">{{ stack.tall[1].icon }}</div>
-            <h3 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">Alpine.js</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">{{ stack.tall[1].description }}</p>
-          </div>
-        </div>
-
-        <!-- Plus Sign -->
-        <div class="hidden lg:flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-xl shadow-lg">+</div>
-
-        <!-- Livewire (L) -->
-        <div class="group relative">
-          <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
-          <div class="relative bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div class="text-4xl sm:text-5xl mb-3">{{ stack.tall[2].icon }}</div>
-            <h3 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent">Livewire</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">{{ stack.tall[2].description }}</p>
-          </div>
-        </div>
-
-        <!-- Plus Sign -->
-        <div class="hidden lg:flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-xl shadow-lg">+</div>
-
-        <!-- Laravel (L) - Grouped Product Side by Side -->
-        <div class="group relative">
-          <div class="absolute -inset-1 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
-          <div class="relative bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div class="text-4xl sm:text-5xl mb-3">{{ stack.tall[3].icon }}</div>
-            <h3 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-red-500 to-pink-600 bg-clip-text text-transparent">Laravel</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">{{ stack.tall[3].description }}</p>
-            
-          </div>
-        </div>
-
-      </div>
-
-      <!-- <div class="flex gap-4 py-4 border-y border-gray-400 border-dashed my-4 ">
+      <div class="flex gap-4 py-4 border-y border-gray-400 border-dashed my-4 ">
         <template v-for="(stack, key) in stack.tall" :key="key">
           <Cart>
             <template #header> {{ stack.name }} </template>
@@ -318,7 +254,7 @@ const projects = ref({
             </template>
           </Cart>
         </template>
-      </div> -->
+      </div>
 
       <!-- TALL Label -->
       <div class="text-center mt-12">
@@ -342,7 +278,7 @@ const projects = ref({
   <!-- Services Grid -->
   <div class="flex overflow-x-sfroll items-start gap-8 ">
 
-    <div v-for="serv in services.serv" class="group relative inset-2">
+    <div v-for="serv in services.serv" class="group relative w-md inset-2">
       <!--<div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div> -->
       
       <div class="relative bg-white shadow-xl dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300" style="height:stretch">
