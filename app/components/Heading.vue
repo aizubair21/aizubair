@@ -8,7 +8,7 @@
       dark:text-gray-200
       text-xl
       leading-relaxed
-      mb-6
+      mb-4
       font-semibold
     "
   >

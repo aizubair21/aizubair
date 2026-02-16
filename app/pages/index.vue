@@ -25,11 +25,11 @@ const hero = ref({
 const stack = ref(
   {
     title: 'Tech Stack',
-    subtitle: 'The powerful tools I use to build modern web applications',
+    subtitle: 'Tailwind, Alpine.Js, Laravel and Livewire. A full stack development solution, built by Laravel community members',
     tall: [
       {
         name: 'TailwindCSS',
-        icon: '🌀',
+        icon: 'https://logo.svgcdn.com/devicon/tailwindcss-original.png',
         color: 'from-cyan-400 to-blue-500',
         description: 'Utility-first CSS framework',
         url: {
@@ -39,7 +39,7 @@ const stack = ref(
       },
       {
         name: 'Alpine.js',
-        icon: '🏔️',
+        icon: 'https://static.cdnlogo.com/logos/a/15/alpine.svg',
         color: 'from-orange-400 to-red-500',
         description: 'Lightweight JavaScript framework',
         url: {
@@ -49,7 +49,7 @@ const stack = ref(
       },
       {
         name: 'Livewire',
-        icon: '⚡',
+        icon: 'https://logo.svgcdn.com/devicon/livewire-original.png',
         color: 'from-yellow-400 to-orange-500',
         description: 'Full-stack framework for Laravel',
         url: {
@@ -59,7 +59,7 @@ const stack = ref(
       },
       {
         name: 'Laravel',
-        icon: '🔥',
+        icon: 'https://logo.svgcdn.com/devicon/laravel-original.png',
         color: 'from-red-500 to-pink-600',
         description: 'PHP framework for web artisans',
         url: {
@@ -75,11 +75,94 @@ const services = ref(
   {
     title: 'Services',
     subtitle: 'Comprehensive digital solutions tailored to your business needs',
+    minify: [
+      {
+        icon:'https://logo.svgcdn.com/devicon/html5-original.png',
+        name:'html',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'1s'
+      }, 
+      {
+        icon:"https://logo.svgcdn.com/devicon/css3-original.png",
+        name:'css',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'1.4s'
+      },
+      {
+        icon:"https://logo.svgcdn.com/devicon-plain/javascript-plain.png",
+        name:'JavaScript',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'1.8s'
+      },
+      {
+        icon:"https://logo.svgcdn.com/devicon/tailwindcss-original.png",
+        name:'TailwindCSS',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'2.2s'
+      },
+      {
+        icon:"https://logo.svgcdn.com/logos/bootstrap.png",
+        name:'Bootstrap',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'2.6s'
+      },
+      {
+        icon:"https://logo.svgcdn.com/logos/php.png",
+        name:'Php',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'1s'
+      },
+      {
+        icon:"https://logo.svgcdn.com/devicon/laravel-original.png",
+        name:'Laravel',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'1.4s'
+      },
+      {
+        icon:"https://logo.svgcdn.com/logos/vue.png",
+        name:'VueJs',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'1.8s'
+      },
+      {
+        icon:"https://logo.svgcdn.com/devicon/livewire-original.png",
+        name:'Livewire',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'2s'
+      },
+      {
+        icon:"https://logo.svgcdn.com/devicon/nuxt-original.png",
+        name:'NuxtJs',
+        desc:'',
+        label:'Front-End',
+        filter:['front', 'back', 'api', 'srver', 'database'],
+        duration:'1.5s'
+      },
+      
+    ],
     serv:[
       {
         label:'back-end',
-        name:'Laravel API Development',
-        icon: '🔥',
+        name:'Laravel REST API',
+        icon: 'https://logo.svgcdn.com/devicon/laravel-original-wordmark.png',
         color: 'from-red-500 to-pink-600',
         description: 'Build robust and scalable RESTful APIs with Laravel. From authentication to complex business logic, I deliver clean, well-documented APIs that power your applications.',
         tags:['Laravel','API','Backend','Breeze','Inertia'],
@@ -90,8 +173,8 @@ const services = ref(
       },
       {
         label:'front-end',
-        name:'Modern Frontend Development',
-        icon: '⚡',
+        name:'Modern Frontend',
+        icon: 'https://logo.svgcdn.com/devicon/nuxt-original-wordmark.png',
         color: 'from-yellow-400 to-orange-500',
         description: 'Create stunning, responsive user interfaces with Vue.js, Nuxt, and TailwindCSS. I focus on performance, accessibility, and seamless user experiences.',
         tags:['Vue.js','Nuxt','TailwindCSS','TypeScript'],
@@ -103,7 +186,7 @@ const services = ref(
       {
         label:'full-stack',
         name:'Full-Stack Solutions',
-        icon: '🌀',
+        icon: 'https://logo.svgcdn.com/devicon/laravel-original-wordmark.png',
         color: 'from-cyan-400 to-blue-500',
         description: 'End-to-end web application development using the TALL stack. From database design to polished UI, I deliver complete solutions that scale.',
         tags:['Laravel','Livewire','Alpine.js','TailwindCSS'],
@@ -115,7 +198,7 @@ const services = ref(
       {
         label:'cloud',
         name:'Cloud & DevOps',
-        icon: '☁️',
+        icon: 'https://logo.svgcdn.com/devicon/cloudflare-original.png',
         color: 'from-purple-400 to-pink-500',
         description: 'Deploy and manage your applications on cloud platforms with CI/CD pipelines, monitoring, and optimized infrastructure for reliability and performance.',
         tags:['AWS','Docker','CI/CD','Linux'],
@@ -123,7 +206,19 @@ const services = ref(
           href:'#',
           text:'Learn More',
         },
-      }
+      },
+      {
+        label:'cloud',
+        name:'Inertia-Laravel',
+        icon: 'https://logo.svgcdn.com/devicon/inertiajs-original-wordmark.png',
+        color: 'from-purple-400 to-pink-500',
+        description: 'Deploy and manage your applications on cloud platforms with CI/CD pipelines, monitoring, and optimized infrastructure for reliability and performance.',
+        tags:['AWS','Docker','CI/CD','Linux'],
+        url:{
+          href:'#',
+          text:'Learn More',
+        },
+      },
     ]
   }
 )
@@ -131,16 +226,37 @@ const services = ref(
 
 
 const projects = ref({
-    title:'',
+    title:'Projects',
     subtitle:'',
     collection:[
         {
-            name:'',
-            description:'',
+            name:'selpoint',
+            filter:['laravel', 'full-stack', 'ecommerce'],
+            badge:'Laravel',
+            status:'Dev',
+            icon:'',
+            color:'',
+            tags:'',
+            description:'A comission based mulitvendor e-commerce starter',
             
             url:{
                 href:'',
-                text:'',
+                text:'Details',
+            },
+        },
+        {
+            name:'selpoint',
+            filter:['laravel', 'full-stack', 'ecommerce'],
+            badge:'Laravel',
+            status:'Dev',
+            icon:'',
+            color:'',
+            tags:'',
+            description:'A comission based mulitvendor e-commerce starter',
+            
+            url:{
+                href:'',
+                text:'Details',
             },
         }
    ]
@@ -211,11 +327,8 @@ const projects = ref({
         <!-- Trust Indicators -->
         <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"> {{ hero.trust.title }} </p>
-          <div class="flex flex-wrap items-center justify-center gap-8 opacity-60">
+          <div class="flex items-center justify-center gap-4 opacity-60">
             <div v-for="indicator in hero.trust.indicator" class="text-gray-400 dark:text-gray-500 font-semibold text-sm"> {{ indicator }} </div>
-            <!-- <div class="text-gray-400 dark:text-gray-500 font-semibold text-sm">Mobile Apps</div>
-            <div class="text-gray-400 dark:text-gray-500 font-semibold text-sm">Cloud Solutions</div>
-            <div class="text-gray-400 dark:text-gray-500 font-semibold text-sm">UI/UX Design</div> -->
           </div>
         </div>
 
@@ -223,7 +336,7 @@ const projects = ref({
     </Container>
 
     <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 animate-bounce">
       <div class="w-6 h-10 border-2 border-gray-400 dark:border-gray-500 rounded-full flex justify-center pt-2">
         <div class="w-1 h-2 bg-gray-400 dark:bg-gray-500 rounded-full animate-pulse"></div>
       </div>
@@ -233,7 +346,7 @@ const projects = ref({
 
 
   <!-- Dev Stack Section - TALL Stack Infographic -->
-  <section class="relative py-20 dark:bg-gray-900 overflow-hidden">
+  <section class="border-b border-gray-400 border-dashed relative py-20 dark:bg-gray-900 overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wMyIgZmlsbC1ydWxlPSJub2tlbiIvPjwvZz48L3N2Zz4=')] opacity-30 dark:opacity-10"></div>
 
@@ -242,22 +355,18 @@ const projects = ref({
       <!-- Section Header -->
       <SectionHeading :heading="stack.title" :subHeading="stack.subtitle"  />
 
-      <div class="flex gap-4 py-4 border-y border-gray-400 border-dashed my-4 ">
-        <template v-for="(stack, key) in stack.tall" :key="key">
-          <Cart>
-            <template #header> {{ stack.name }} </template>
-            <template #body> 
-              <Content>{{ stack.description }}</Content>  
-              <NavLink>
-                {{ stack.url.text }}
-              </NavLink>
-            </template>
-          </Cart>
-        </template>
+      <div class="flex flex-wrap items-center justify-center lg:gap-8 items-center py-4 my-4 ">
+        <Cart v-for="(stack, key) in stack.tall" :key="key" class="w-[160px]">
+          <NuxtLink class="group relative text-center">
+            <NuxtImg :src="stack.icon"  class="mx-auto h-32 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${key+1}s`" />
+            <Content class="transition-all duration-200"> {{ stack.name }} </Content>
+          </NuxtLink>
+        </Cart>
       </div>
 
+
       <!-- TALL Label -->
-      <div class="text-center mt-12">
+      <div class="text-center">
         <div class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-full shadow-lg">
           <span class="text-white font-bold text-lg">TALL Stack</span>
           <span class="text-white/80 text-sm">|</span>
@@ -265,79 +374,80 @@ const projects = ref({
         </div>
       </div>
 
+
+      
+
     </Container>
   </section>
 
 
   <!-- services  -->
-<Container class="relative z-10 px-4 sm:px-6 lg:px-8">
+  <Container class="border-b border-gray-400 border-dashed relative z-10 px-4 sm:px-6 lg:px-8 py-20">
 
-  <!-- Section Header -->
-  <SectionHeading :heading="services.title" :subHeading="services.subtitle"  />
+    <!-- Section Header -->
+    <SectionHeading :heading="services.title" :subHeading="services.subtitle"  />
 
-  <!-- Services Grid -->
-  <div class="flex overflow-x-sfroll items-start gap-8 ">
-
-    <div v-for="serv in services.serv" class="group relative w-md inset-2">
-      <!--<div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div> -->
-      
-      <div class="relative bg-white shadow-xl dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300" style="height:stretch">
-        
-        <!-- Icon -->
-        <div class="relative border-b border-gray-300 border-dashed h-32 flex items-center justify-center">
-          <div class="text-5xl mb-4">{{ serv.icon }}</div>
-        </div>
-
-        <div class="p-6 flex flex-col">
-        
-          <!-- Title -->
-          <Heading>
-            {{ serv.name }}
-          </Heading>
-        
-          <!-- Description -->
-          <p class="flex-1 text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-            {{ serv.description }}
-          </p>
-        
-          <!-- Tags -->
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span
-              v-for="tag in serv.tags"
-              :key="tag"
-              class="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full"
-            >
-              {{ tag }}
-            </span>
+    <div class="mt-4 gap-4 mb-4 flex overflow-x-scroll" >
+        <Cart v-for="(serv, key) in services.serv" :key="key" class="hover:shadow-3xl lg:bg-gradient-to-r " style="min-width:270px">
+          <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div>
+          <div :color="serv.color" class="flex items-start justify-start p-4 w-auto h-36 lg:w-48">
+            <NuxtImg :src="serv.icon" class="h-full w-full object-cover group-hover:shadow-3xl" />
           </div>
-        
-          <!-- CTA -->
-          <NavLink :href="serv.url.href" class="inline-flex items-center gap-2 text-purple-500 font-semibold group-hover:gap-3 transition-all">
-            {{ serv.url.text }}
-          </NavLink>
+          <template #body>
+            <Heading> {{ serv.name }} </Heading>
+            <Content>{{serv.description}}</Content>
+            <br>
+            <NavLink>{{serv.url.text}}</NavLink>
+          </template>
+        </Cart>
+    </div> 
+
+    <br>
+    <div class="flex flex-wrap items-center justify-center lg:gap-8 items-center py-4 my-4 ">
+          <Cart v-for="(min, key) in services.minify" :key="key" class="w-[160px] relative">
+            <!-- <Content class="absolute top-1 left-1 px-2 rounded-sm bg-indigo-500 text-xs text-white z-2">{{min.label}}</Content> -->
+            <Badges :title="min.label" position="top-1 left-1" color="bg-indigo-500 text-white"/>
+            <NuxtLink class="group relative text-center">
+              <NuxtImg :src="min.icon"  class="mx-auto h-32 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${min.duration}`" />
+              <Content class="transition-all duration-200"> {{ min.name.toUpperCase() }} </Content>
+            </NuxtLink>
+          </Cart>
         </div>
-      </div>
-    </div>
 
+  </Container>
 
-  </div>
-
-  <!-- <div class="grid grid-cols-4 mt-4 gap-4">
-      <Cart v-for="serv in services.serv" class="relative inset-2 ">
-        <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div>
-        <div :color="serv.color" class="flex items-center justify-center h-24 "> {{ serv.label }} </div>
-        <template #header>
-          {{ serv.name }}
-        </template>
-        <template #body>
-          <Content>{{serv.description}}</Content>
-        </template>
-      </Cart>
-  </div> -->
-
-</Container>
 
   <!-- projects  -->
+  <Container class="border-b border-gray-400 border-dashed relative z-10 px-4 sm:px-6 lg:px-8 py-20">
+    <div class="flex flex-wrap justify-center gap-10">
+      <div class="rounded-full px-3 bg-white text-sm" >LIVE</div>
+    </div>
+    <SectionHeading :heading="projects.title" />
+    <br>
+
+    <div  style="display:grid; justify-content:center; grid-template-columns:repeat(auto-fit, minmax(160px, 300px)); grid-gap:10px">
+      <Cart v-for="(proj, key) in projects.collection" :key class="relative group">
+
+        <div class="relative h-36 w-auto">
+          <NuxtImg src="placeholder.jpg" class="h-full w-full object-cover" />
+
+          <Badges :title='proj.badge' position="bottom-1 right-2" color="bg-indigo-600 text-white" />
+          <Badges :title='proj.status' position="top-1 left-2" color="bg-gray-600 text-white" />
+        </div>
+
+        <template #body>
+          <Heading>{{ proj.name.toUpperCase() }}</Heading>
+          <Content>
+            {{ proj.description }}
+          </Content>
+          <NavLink>
+            {{ proj.url.text }}
+          </NavLink>
+        </template>
+        <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="proj.color"></div>
+      </Cart>
+    </div>
+  </Container>
 
 
   <!-- case studies  -->
