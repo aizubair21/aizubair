@@ -32,6 +32,7 @@ const stack = ref(
         icon: 'https://logo.svgcdn.com/devicon/tailwindcss-original.png',
         color: 'from-cyan-400 to-blue-500',
         description: 'Utility-first CSS framework',
+        badge:'T',
         url: {
           href:'',
           text :'Learn More',
@@ -42,6 +43,7 @@ const stack = ref(
         icon: 'https://static.cdnlogo.com/logos/a/15/alpine.svg',
         color: 'from-orange-400 to-red-500',
         description: 'Lightweight JavaScript framework',
+        badge:'A',
         url: {
           href:'',
           text :'Learn More',
@@ -52,6 +54,7 @@ const stack = ref(
         icon: 'https://logo.svgcdn.com/devicon/livewire-original.png',
         color: 'from-yellow-400 to-orange-500',
         description: 'Full-stack framework for Laravel',
+        badge:'L',
         url: {
           href:'',
           text :'Learn More',
@@ -62,6 +65,7 @@ const stack = ref(
         icon: 'https://logo.svgcdn.com/devicon/laravel-original.png',
         color: 'from-red-500 to-pink-600',
         description: 'PHP framework for web artisans',
+        badge:'L',
         url: {
           href:'',
           text :'Learn More',
@@ -263,12 +267,36 @@ const projects = ref({
 
 
 });
+
+
+/**
+ * case studeis around php, laravel, javascript, livewire, alpine, dom, subscription, Blade layout, etc
+*/
+const studies = ref(
+  {
+    title:'Case Study',
+    subtitle:'',
+    collection:[
+      {
+        name:'',
+        icon:'https://logo.svgcdn.com/simple-icons/pinboard-dark.png',
+        label:'Laravel',
+        badge:'',
+        desc:'',
+        url:{
+          href:'',
+          text:'Descover More',
+        }
+      }
+    ]
+  }
+);
 </script>
 
 <template>
 
   <!-- Banner Section -->
-  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden border-b border-dashed border-gray-400 dark:bg-gray-900">
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden dark:bg-gray-900">
     
     <!-- Gradient Background -->
     <div class="fixed inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/10 to-pink-600/10 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-pink-900/20"></div>
@@ -346,7 +374,7 @@ const projects = ref({
 
 
   <!-- Dev Stack Section - TALL Stack Infographic -->
-  <section class="border-b border-gray-400 border-dashed relative py-20 dark:bg-gray-900 overflow-hidden">
+  <section class="relative py-20 dark:bg-gray-900 overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wMyIgZmlsbC1ydWxlPSJub2tlbiIvPjwvZz48L3N2Zz4=')] opacity-30 dark:opacity-10"></div>
 
@@ -355,12 +383,14 @@ const projects = ref({
       <!-- Section Header -->
       <SectionHeading :heading="stack.title" :subHeading="stack.subtitle"  />
 
-      <div class="flex flex-wrap items-center justify-center lg:gap-8 items-center py-4 my-4 ">
+      <!-- stacks  -->
+      <div class="flex flex-wrap items-center justify-center lg:gap-8 py-4 my-4 ">
         <Cart v-for="(stack, key) in stack.tall" :key="key" class="w-[160px]">
           <NuxtLink class="group relative text-center">
-            <NuxtImg :src="stack.icon"  class="mx-auto h-32 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${key+1}s`" />
+            <Img :src="stack.icon"  class="mx-auto h-32 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${key+1}s`" />
             <Content class="transition-all duration-200"> {{ stack.name }} </Content>
           </NuxtLink>
+          <Badges :title="stack.badge" position="top-1 left-1" color="bg-pink-900 text-white" />
         </Cart>
       </div>
 
@@ -375,8 +405,6 @@ const projects = ref({
       </div>
 
 
-      
-
     </Container>
   </section>
 
@@ -387,29 +415,29 @@ const projects = ref({
     <!-- Section Header -->
     <SectionHeading :heading="services.title" :subHeading="services.subtitle"  />
 
-    <div class="mt-4 gap-4 mb-4 flex overflow-x-scroll" >
-        <Cart v-for="(serv, key) in services.serv" :key="key" class="hover:shadow-3xl lg:bg-gradient-to-r " style="min-width:270px">
-          <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div>
-          <div :color="serv.color" class="flex items-start justify-start p-4 w-auto h-36 lg:w-48">
-            <NuxtImg :src="serv.icon" class="h-full w-full object-cover group-hover:shadow-3xl" />
-          </div>
-          <template #body>
-            <Heading> {{ serv.name }} </Heading>
-            <Content>{{serv.description}}</Content>
-            <br>
-            <NavLink>{{serv.url.text}}</NavLink>
-          </template>
-        </Cart>
-    </div> 
+    <Grid max="300px" gap="10px">
+      <Cart v-for="(serv, key) in services.serv" :key="key" class="hover:shadow-3xl lg:bg-gradient-to-r" >
+        <!-- <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="serv.color"></div> -->
+
+        <template #img>
+          <Img :src="serv.icon" class="h-full w-full p-4 object-cover group-hover:shadow-3xl" />
+        </template>
+      
+        <template #header> {{ serv.name }} </template>
+        <template #body>
+          <Content>{{serv.description}}</Content>
+          <NavLink>{{serv.url.text}}</NavLink>
+        </template>
+      </Cart>
+    </Grid> 
 
     <br>
     <div class="flex flex-wrap items-center justify-center lg:gap-8 items-center py-4 my-4 ">
           <Cart v-for="(min, key) in services.minify" :key="key" class="w-[160px] relative">
-            <!-- <Content class="absolute top-1 left-1 px-2 rounded-sm bg-indigo-500 text-xs text-white z-2">{{min.label}}</Content> -->
             <Badges :title="min.label" position="top-1 left-1" color="bg-indigo-500 text-white"/>
             <NuxtLink class="group relative text-center">
-              <NuxtImg :src="min.icon"  class="mx-auto h-32 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${min.duration}`" />
-              <Content class="transition-all duration-200"> {{ min.name.toUpperCase() }} </Content>
+              <Img :src="min.icon"  class="mx-auto h-32 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${min.duration}`" />
+              <Content class="group-hover:shadow-3xl"> {{ min.name.toUpperCase() }} </Content>
             </NuxtLink>
           </Cart>
         </div>
@@ -425,18 +453,19 @@ const projects = ref({
     <SectionHeading :heading="projects.title" />
     <br>
 
-    <div  style="display:grid; justify-content:center; grid-template-columns:repeat(auto-fit, minmax(160px, 300px)); grid-gap:10px">
-      <Cart v-for="(proj, key) in projects.collection" :key class="relative group">
+    <!-- projects  -->
+    <Grid min="200px" max="1fr" gap="20px">
+      <Cart v-for="(proj, key) in projects.collection" :key >
 
-        <div class="relative h-36 w-auto">
-          <NuxtImg src="placeholder.jpg" class="h-full w-full object-cover" />
+        <div class="relative h-48 lg:h-36 w-auto">
+          <Img src="placeholder.jpg" class="h-full w-full object-cover hover:scale-125" />
 
           <Badges :title='proj.badge' position="bottom-1 right-2" color="bg-indigo-600 text-white" />
           <Badges :title='proj.status' position="top-1 left-2" color="bg-gray-600 text-white" />
         </div>
 
+        <template #header>{{ proj.name.toUpperCase() }}</template>
         <template #body>
-          <Heading>{{ proj.name.toUpperCase() }}</Heading>
           <Content>
             {{ proj.description }}
           </Content>
@@ -446,12 +475,37 @@ const projects = ref({
         </template>
         <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="proj.color"></div>
       </Cart>
-    </div>
+    </Grid>
   </Container>
 
 
   <!-- case studies  -->
+  <Container>
+    <SectionHeading :heading="studies.title"/>
+    <br>
 
+    <Grid min="200px" max="1fr" gap="20px">
+      <Cart v-for="(cases, key) in studies.collection" :key >
+
+        <div class="relative h-48 lg:h-36 w-auto">
+          <Img :src="cases.icon" class="h-full w-full object-cover hover:scale-125" />
+
+          <!-- <Badges :title='cases.badge' position="bottom-1 right-2" color="bg-indigo-600 text-white" /> -->
+          <Badges :title='cases.label' position="top-1 left-2" color="bg-gray-600 text-white" />
+        </div>
+
+        <template #header>{{ cases.name.toUpperCase() }}</template>
+        <template #body>
+          <Content>
+            {{ cases.description }}
+          </Content>
+          <NavLink>
+            {{ cases.url.text }}
+          </NavLink>
+        </template>
+      </Cart>
+    </Grid>
+  </Container>
 
   <!-- dev skills  -->
 
@@ -463,6 +517,8 @@ const projects = ref({
 
 
   <!-- career path  -->
+
+
 </template>
 
 <style lang="postcss" scoped>
