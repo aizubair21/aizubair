@@ -25,7 +25,7 @@ withDefaults(defineProps<Props>(), {
       <!-- Arrow icon that slides from right to left on hover -->
       <span
         class="
-          inline-block
+          block
           transition-transform duration-300 ease-in-out
           group-hover:translate-x-0.5 group-hover:opacity-100
         "

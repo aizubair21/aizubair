@@ -10,8 +10,9 @@ useSeoMeta({
   description: 'Professional developer portfolio showcasing custom web applications, mobile solutions, and digital transformation services.'
 })
 
+  // title: 'Building Digital Solutions That Drive Business Growth',
 const hero = ref({
-  title: 'Building Digital Solutions That Drive Business Growth',
+  title: 'Building Digital Solutions',
   subtitle: 'I transform complex challenges into elegant, high-performing applications that help your business succeed in the digital landscape.',
   ctaPrimary: 'View Portfolio',
   ctaSecondary: 'Start a Project',
@@ -24,8 +25,8 @@ const hero = ref({
 
 const stack = ref(
   {
-    title: 'Tech Stack',
-    subtitle: 'Tailwind, Alpine.Js, Laravel and Livewire. A full stack development solution, built by Laravel community members',
+    title: 'Drive Business Growth',
+    subtitle: 'Reactive Laravel Apps with the TALL stack. Tailwind, Alpine.Js, Laravel and Livewire. A full stack development solution, built by Laravel community members',
     tall: [
       {
         name: 'TailwindCSS',
@@ -294,34 +295,31 @@ const studies = ref(
 </script>
 
 <template>
+  <!-- Gradient Background -->
+  <div class="fixed inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/10 to-pink-600/10 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-pink-900/20"></div>
+  
+  <!-- Animated Geometric Shapes -->
+  <div class="fixed inset-0 overflow-hidden">
+    <!-- Shape 1 -->
+    <div class="fixed -top-20 -left-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+    <!-- Shape 2 -->
+    <div class="fixed top-1/3 -right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    <!-- Shape 3 -->
+    <div class="fixed -bottom-20 left-1/3 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    
+    <!-- Floating geometric elements -->
+    <div class="fixed top-20 left-[10%] w-4 h-4 bg-purple-400/30 rounded-sm rotate-45 animate-bounce" style="animation-duration: 3s;"></div>
+    <div class="fixed top-40 right-[15%] w-6 h-6 bg-blue-400/30 rounded-full animate-bounce" style="animation-duration: 4s;"></div>
+    <div class="fixed bottom-32 left-[20%] w-3 h-3 bg-pink-400/30 rounded-sm animate-bounce" style="animation-duration: 3.5s;"></div>
+    <div class="fixed bottom-20 right-[25%] w-5 h-5 bg-purple-400/30 rounded-full animate-bounce" style="animation-duration: 4.5s;"></div>
+  </div>
+
 
   <!-- Banner Section -->
-  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden dark:bg-gray-900">
-    
-    <!-- Gradient Background -->
-    <div class="fixed inset-0 bg-gradient-to-br from-purple-600/10 via-blue-600/10 to-pink-600/10 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-pink-900/20"></div>
-    
-    <!-- Animated Geometric Shapes -->
-    <div class="fixed inset-0 overflow-hidden">
-      <!-- Shape 1 -->
-      <div class="fixed -top-20 -left-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-      <!-- Shape 2 -->
-      <div class="fixed top-1/3 -right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-      <!-- Shape 3 -->
-      <div class="fixed -bottom-20 left-1/3 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
-      
-      <!-- Floating geometric elements -->
-      <div class="fixed top-20 left-[10%] w-4 h-4 bg-purple-400/30 rounded-sm rotate-45 animate-bounce" style="animation-duration: 3s;"></div>
-      <div class="fixed top-40 right-[15%] w-6 h-6 bg-blue-400/30 rounded-full animate-bounce" style="animation-duration: 4s;"></div>
-      <div class="fixed bottom-32 left-[20%] w-3 h-3 bg-pink-400/30 rounded-sm animate-bounce" style="animation-duration: 3.5s;"></div>
-      <div class="fixed bottom-20 right-[25%] w-5 h-5 bg-purple-400/30 rounded-full animate-bounce" style="animation-duration: 4.5s;"></div>
-    </div>
+  <Container class="z-10">
+    <section class="relative flex items-center justify-center overflow-hidden dark:bg-gray-900">
 
-    <!-- Grid Pattern Overlay -->
-    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wMyIgZmlsbC1ydWxlPSJub2tlbiIvPjwvZz48L3N2Zz4=')] opacity-30 dark:opacity-10"></div>
-
-    <!-- Content Container -->
-    <Container class="relative z-10 px-4 sm:px-6 lg:px-8 py-20">
+      <!-- Content Container -->
       <div class="max-w-4xl mx-auto text-center">
         
         <!-- Badge -->
@@ -331,19 +329,34 @@ const studies = ref(
         </div>
 
         <!-- Main Title -->
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-          <span class="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 bg-clip-text text-transparent dark:from-purple-400 dark:via-blue-400 dark:to-pink-400">
-            {{ hero.title }}
-          </span>
-        </h1>
+        <HeroTitle :title="hero.title" />
+
+        <!-- TALL Label -->
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-full shadow-lg">
+            <span class="text-white font-bold text-lg">TALL Stack</span>
+            <span class="text-white/80 hidden lg:block text-sm">|</span>
+            <span class="text-white/90 hidden lg:block text-sm">Modern Web Development</span>
+          </div>
+        </div>
+
+        <!-- stack  -->
+        <Flex class="flex-wrap gap-4">
+          <Cart v-for="(stack, key) in stack.tall" :key="key" class="w-[150px] bg-transparent">
+            <NuxtLink class="group relative text-center">
+              <Img :src="stack.icon"  class="mx-auto h-24 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${key+1}s`" />
+              <Content class="transition-all duration-200"> {{ stack.name }} </Content>
+            </NuxtLink>
+          </Cart>
+        </Flex>
 
         <!-- Subtitle -->
-        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <!-- <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
           {{ hero.subtitle }}
-        </p>
+        </p> -->
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="flex flex-col sm:flex-row items-center pt-6 justify-center gap-4">
           <Button variant="primary" class="w-full sm:w-auto px-8 py-4 text-base">
             {{ hero.ctaPrimary }}
           </Button>
@@ -353,7 +366,7 @@ const studies = ref(
         </div>
 
         <!-- Trust Indicators -->
-        <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div class="mt-16 pt-8 border-gray-200 dark:border-gray-700">
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4"> {{ hero.trust.title }} </p>
           <div class="flex items-center justify-center gap-4 opacity-60">
             <div v-for="indicator in hero.trust.indicator" class="text-gray-400 dark:text-gray-500 font-semibold text-sm"> {{ indicator }} </div>
@@ -361,52 +374,38 @@ const studies = ref(
         </div>
 
       </div>
-    </Container>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 animate-bounce">
-      <div class="w-6 h-10 border-2 border-gray-400 dark:border-gray-500 rounded-full flex justify-center pt-2">
-        <div class="w-1 h-2 bg-gray-400 dark:bg-gray-500 rounded-full animate-pulse"></div>
-      </div>
-    </div>
-
-  </section>
 
 
-  <!-- Dev Stack Section - TALL Stack Infographic -->
-  <section class="relative py-20 dark:bg-gray-900 overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wMyIgZmlsbC1ydWxlPSJub2tlbiIvPjwvZz48L3N2Zz4=')] opacity-30 dark:opacity-10"></div>
-
-    <Container class="relative z-10 px-4 sm:px-6 lg:px-8">
- 
-      <!-- Section Header -->
-      <SectionHeading :heading="stack.title" :subHeading="stack.subtitle"  />
-
-      <!-- stacks  -->
-      <div class="flex flex-wrap items-center justify-center lg:gap-8 py-4 my-4 ">
-        <Cart v-for="(stack, key) in stack.tall" :key="key" class="w-[160px]">
-          <NuxtLink class="group relative text-center">
-            <Img :src="stack.icon"  class="mx-auto h-32 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${key+1}s`" />
-            <Content class="transition-all duration-200"> {{ stack.name }} </Content>
-          </NuxtLink>
-          <Badges :title="stack.badge" position="top-1 left-1" color="bg-pink-900 text-white" />
-        </Cart>
-      </div>
-
-
-      <!-- TALL Label -->
-      <div class="text-center">
-        <div class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-full shadow-lg">
-          <span class="text-white font-bold text-lg">TALL Stack</span>
-          <span class="text-white/80 text-sm">|</span>
-          <span class="text-white/90 text-sm">Modern Web Development</span>
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-20 left-1/2 -translate-x-1/2 animate-bounce">
+        <div class="w-6 h-10 border-2 border-gray-400 dark:border-gray-500 rounded-full flex justify-center pt-2">
+          <div class="w-1 h-2 bg-gray-400 dark:bg-gray-500 rounded-full animate-bounce"></div>
         </div>
       </div>
 
+    </section>
+  </Container>
 
-    </Container>
-  </section>
+  <!-- Dev Stack Section - TALL Stack Infographic -->
+  <Container class="relative z-10 px-4 sm:px-6 lg:px-8">
+      <section class="relative py-20 dark:bg-gray-900 overflow-hidden">
+ 
+        <!-- Section Header -->
+        <SectionHeading :heading="stack.title" :subHeading="stack.subtitle"  />
+
+        <!-- stacks  -->
+        <Flex class="flex-wrap gap-4">
+          <Cart v-for="(stack, key) in stack.tall" :key="key" class="w-[150px]">
+            <NuxtLink class="group relative text-center">
+              <Img :src="stack.icon"  class="mx-auto h-32 p-4 animate-pulse cursor-pointer" :style="`animation-duration: ${key+1}s`" />
+              <Content class="transition-all duration-200"> {{ stack.name }} </Content>
+            </NuxtLink>
+            <Badges :title="stack.badge" position="top-1 left-1" color="bg-pink-900 text-white" />
+          </Cart>
+        </Flex>
+
+    </section>
+  </Container>
 
 
   <!-- services  -->
@@ -474,6 +473,7 @@ const studies = ref(
           </NavLink>
         </template>
         <div class="absolute -inset-1 bg-gradient-to-r rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-500" :class="proj.color"></div>
+        
       </Cart>
     </Grid>
   </Container>
