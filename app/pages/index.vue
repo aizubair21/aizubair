@@ -19,13 +19,13 @@ const hero = ref({
   trust:
   {
     title:'Trusted by businesses worldwide',
-    indicator: ['Web Development', 'Mobile Apps', 'Cloud Solutions']
+    indicator: ['Web Development', 'Mobile Apps', 'Cloud Solutions'],
   }
-})
+});
 
 const stack = ref(
   {
-    title: 'Drive Business Growth',
+    title: 'Drive Your Business Growth',
     subtitle: 'Reactive Laravel Apps with the TALL stack. Tailwind, Alpine.Js, Laravel and Livewire. A full stack development solution, built by Laravel community members',
     tall: [
       {
@@ -78,7 +78,7 @@ const stack = ref(
 
 const services = ref(
   {
-    title: 'Services',
+    title: 'Building Digitals ',
     subtitle: 'Comprehensive digital solutions tailored to your business needs',
     minify: [
       {
@@ -228,45 +228,41 @@ const services = ref(
   }
 )
 
-
-
 const projects = ref({
-    title:'Projects',
+    title:'Work That Speaks Itself',
     subtitle:'',
     collection:[
-        {
-            name:'selpoint',
-            filter:['laravel', 'full-stack', 'ecommerce'],
-            badge:'Laravel',
-            status:'Dev',
-            icon:'',
-            color:'',
-            tags:'',
-            description:'A comission based mulitvendor e-commerce starter',
-            
-            url:{
-                href:'',
-                text:'Details',
-            },
-        },
-        {
-            name:'selpoint',
-            filter:['laravel', 'full-stack', 'ecommerce'],
-            badge:'Laravel',
-            status:'Dev',
-            icon:'',
-            color:'',
-            tags:'',
-            description:'A comission based mulitvendor e-commerce starter',
-            
-            url:{
-                href:'',
-                text:'Details',
-            },
-        }
+      {
+          name:'selpoint',
+          filter:['laravel', 'full-stack', 'ecommerce'],
+          badge:'Laravel',
+          status:'Dev',
+          icon:'',
+          color:'',
+          tags:'',
+          description:'A comission based mulitvendor e-commerce starter',
+          
+          url:{
+              href:'',
+              text:'Details',
+          },
+      },
+      {
+          name:'selpoint',
+          filter:['laravel', 'full-stack', 'ecommerce'],
+          badge:'Laravel',
+          status:'Dev',
+          icon:'',
+          color:'',
+          tags:'',
+          description:'A comission based mulitvendor e-commerce starter',
+          
+          url:{
+              href:'',
+              text:'Details',
+          },
+      }
    ]
-
-
 });
 
 
@@ -275,24 +271,93 @@ const projects = ref({
 */
 const studies = ref(
   {
-    title:'Case Study',
-    subtitle:'',
+    title:'Innovative Sollutions',
+    subtitle:'Sollutions that tailored various categories of services',
     collection:[
       {
-        name:'',
-        icon:'https://logo.svgcdn.com/simple-icons/pinboard-dark.png',
+        name:'Laravel RBAC',
+        icon:`https://placehold.co/800?text=RBAC&font=roboto`,
         label:'Laravel',
-        badge:'',
-        desc:'',
+        badge:'RBAC',
+        desc:'Laravel Role-Based access control',
         url:{
           href:'',
-          text:'Descover More',
+          text:'Read More',
+        }
+      },
+      {
+        name:'Laravel Subscription',
+        icon:`https://placehold.co/800?text=RBAC&font=roboto`,
+        label:'Laravel',
+        badge:'RBAC',
+        desc:'Minimal subscription setup to ecommerce',
+        url:{
+          href:'',
+          text:'Read More',
+        }
+      },
+      {
+        name:'Dashboard',
+        icon:`https://placehold.co/800?text=RBAC&font=roboto`,
+        label:'Laravel',
+        badge:'Dashboard',
+        desc:'Single Dashboard for multiple role.',
+        url:{
+          href:'',
+          text:'Read More',
+        }
+      },
+      {
+        name:'MLM Comissions',
+        icon:`https://placehold.co/800?text=MLM&font=roboto`,
+        label:'ecommerce',
+        badge:'marketing',
+        desc:'Multi lavel marketing comission to laravel multivendor ecommerce.',
+        url:{
+          href:'',
+          text:'Read More',
+        }
+      },
+      {
+        name:'Multivendor',
+        icon:`https://placehold.co/800?text=VENDOR&font=roboto`,
+        label:'ecommerce',
+        badge:'marketing',
+        desc:'Setup a multivendor database for ecommerce website.',
+        url:{
+          href:'',
+          text:'Read More',
+        }
+      },
+      {
+        name:'Parent Category',
+        icon:`https://placehold.co/800?text=CATEGORY&font=roboto`,
+        label:'ecommerce',
+        badge:'marketing',
+        desc:'Setup a parent-child based category database.',
+        url:{
+          href:'',
+          text:'Read More',
+        }
+      },
+      {
+        name:'CTA',
+        icon:`https://placehold.co/800?text=CTA&font=roboto`,
+        label:'JavaScript',
+        badge:'CTA',
+        desc:'Valina JavaScript Call-To-Action setup',
+        url:{
+          href:'',
+          text:'Read More',
         }
       }
     ]
   }
 );
+
+
 </script>
+
 
 <template>
   <!-- Gradient Background -->
@@ -481,23 +546,23 @@ const studies = ref(
 
   <!-- case studies  -->
   <Container>
-    <SectionHeading :heading="studies.title"/>
+    <SectionHeading :heading="studies.title" :subHeading="studies.subtitle"/>
     <br>
 
     <Grid min="200px" max="1fr" gap="20px">
       <Cart v-for="(cases, key) in studies.collection" :key >
 
         <div class="relative h-48 lg:h-36 w-auto">
-          <Img :src="cases.icon" class="h-full w-full object-cover hover:scale-125" />
+          <Img :src="`https://placehold.co/800?text=${cases.badge}&font=roboto`" class="h-full w-full object-cover hover:scale-110" />
 
           <!-- <Badges :title='cases.badge' position="bottom-1 right-2" color="bg-indigo-600 text-white" /> -->
-          <Badges :title='cases.label' position="top-1 left-2" color="bg-gray-600 text-white" />
+          <Badges :title='cases.label' position="top-2 left-2" color="bg-gray-600 text-white" />
         </div>
 
-        <template #header>{{ cases.name.toUpperCase() }}</template>
+        <template #header class="capitalize leading-1">{{ cases.name.toUpperCase() }}</template>
         <template #body>
           <Content>
-            {{ cases.description }}
+            {{ cases.desc }}
           </Content>
           <NavLink>
             {{ cases.url.text }}
@@ -507,8 +572,11 @@ const studies = ref(
     </Grid>
   </Container>
 
-  <!-- dev skills  -->
 
+  <!-- dev skills  -->
+  <Container>
+    
+  </Container>
 
   <!-- soft skills  -->
 

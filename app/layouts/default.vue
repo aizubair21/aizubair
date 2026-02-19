@@ -1,5 +1,8 @@
 <script setup>
 
+definePageMeta({
+    
+})
 </script>
 
 <template>

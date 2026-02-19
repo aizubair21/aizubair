@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <Content class="absolute px-2 rounded-sm text-xs z-2" :class="[position, color]">{{title}}</Content>
+    <Content class="absolute px-2 rounded-lg text-xs z-2" :class="[position, color]">{{title}}</Content>
 </template>
 
 <style lang="postcss" scoped>
